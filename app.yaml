@@ -1,0 +1,13 @@
+application: meltrams
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+# HOW TO LOAD:
+# ~/unix/local/appengine/bulkload_client.py --filename /tmp/tram_data.csv --kind TramInfo --url http://meltrams.appspot.com/load
+#- url: /load
+#  script: dataloader.py
+
+- url: /.*
+  script: main.py
